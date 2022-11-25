@@ -1,0 +1,185 @@
+.Sidebar {
+  position: relative;
+  .levelOne {
+    width: 20vw;
+    height: 100vh;
+    background: #ffffff;
+    border-radius: 0 10px 10px 0;
+    position: absolute;
+    top: 0;
+    left: -20vw;
+    transition: left 0.5s ease-in 0s;
+    z-index: 4;
+    .closeIcon {
+      text-align: right;
+      padding: 10px;
+      font-size: 1rem;
+      cursor: pointer;
+    }
+    .topContainer {
+      padding: 0rem 1rem;
+      .titleContainer {
+        display: flex;
+        padding: 1rem;
+        font-size: 1.2rem;
+        p {
+          margin: 0;
+          padding-left: 1rem;
+        }
+      }
+
+      .signUpContainer {
+        padding: 1rem;
+        .borderButton {
+          height: 1rem;
+          border: 2px solid black;
+          border-radius: 1.5rem;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          padding: 0.5rem;
+        }
+      }
+
+      .chatBoxContainer {
+        padding: 1rem;
+        .ChatBox {
+          background: #efefef;
+          padding: 1rem;
+          font-size: 1rem;
+          border-radius: 10px;
+          text-align: center;
+          position: relative;
+          .icon {
+            position: absolute;
+            font-size: 1.5rem;
+            top: -0.8rem;
+            left: 45%;
+          }
+        }
+      }
+    }
+
+    .navContainer {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      align-content: center;
+      .topNav,
+      .bottomNav {
+        .navButton {
+          cursor: pointer;
+          padding: 1rem;
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          .textContainer {
+            display: flex;
+            .icon {
+              height: 2rem;
+              width: 2rem;
+              background: #efefef;
+              border-radius: 50%;
+              display: flex;
+              justify-content: center;
+              align-items: center;
+              font-size: 1.2rem;
+            }
+            .text {
+              display: flex;
+              justify-content: center;
+              align-items: center;
+              margin-left: 1rem;
+            }
+          }
+
+          .arrow {
+            font-size: 1.2rem;
+            color: #bb0f8e;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+          }
+
+          &:hover,
+          &.active {
+            background: #bb0f8e;
+            color: white;
+            .textContainer {
+              .icon {
+                background: #c71392;
+              }
+            }
+            .arrow {
+              color: white;
+            }
+          }
+        }
+      }
+    }
+  }
+  .openLevelOne {
+    left: 0;
+  }
+
+  .levelTwo {
+    width: 20vw;
+    height: 100vh;
+    background: #bb0f8e;
+    border-radius: 0 10px 10px 0;
+    position: absolute;
+    top: 0;
+    left: -20vw;
+    transition: left 0.5s ease-in 0s;
+    z-index: 2;
+    .closeIcon {
+      text-align: right;
+      padding: 10px;
+      font-size: 1rem;
+      cursor: pointer;
+    }
+
+    .navContainer {
+      display: flex;
+      flex-direction: column;
+      .navButton {
+        height: 50px;
+        display: flex;
+        justify-content: flex-start;
+        padding: 0rem 1rem;
+
+        color: white;
+
+        .internalContainer {
+          display: flex;
+          justify-content: flex-start;
+          align-items: center;
+          gap: 1rem;
+          width: 100%;
+          border-top: 2px solid #00000025;
+          // border-bottom: 2px solid #00000025;
+          .icon {
+            font-size: 1.5rem;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+          }
+          .text {
+            font-size: 1.5rem;
+          }
+        }
+
+        &:hover {
+          background: #ffa700;
+          .internalContainer {
+            border: none;
+          }
+        }
+      }
+    }
+  }
+
+  .openLevelTwo {
+    left: 20vw;
+  }
+}
